@@ -47,9 +47,8 @@ fbq('track', 'PageView');
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 0 25px rgba(255, 188, 0, 0.6), 0 0 60px rgba(255, 140, 0, 0.4);
-  animation: pulseGlow 2s infinite;
-  overflow: hidden;
+  box-shadow: 0 0 25px rgba(255, 188, 0, 0.6);
+  animation: pulseGlow 2s infinite ease-in-out;
 }
 
 .avatar img {
@@ -58,17 +57,18 @@ fbq('track', 'PageView');
   object-fit: cover;
   border-radius: 50%;
   padding: 5px;
+  display: block;
 }
-
-/* Glow animado suave */
+  
 @keyframes pulseGlow {
   0%, 100% {
-    box-shadow: 0 0 25px rgba(255, 188, 0, 0.6), 0 0 60px rgba(255, 140, 0, 0.4);
+    box-shadow: 0 0 25px rgba(255, 188, 0, 0.6);
   }
   50% {
-    box-shadow: 0 0 35px rgba(255, 188, 0, 0.9), 0 0 80px rgba(255, 140, 0, 0.6);
+    box-shadow: 0 0 40px rgba(255, 188, 0, 1);
   }
 }
+
 
 
         h1 {
@@ -151,6 +151,7 @@ fbq('track', 'PageView');
 </noscript>
   
     <div class="container">
+      <div style="display: flex; justify-content: center;">
         <img src="avatar.jpeg" alt="Avatar" class="avatar">
         <h1>ENVIANOS UN WHATSAPP PARA CREAR TU CUENTA</h1>
         
