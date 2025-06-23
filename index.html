@@ -38,12 +38,64 @@ fbq('track', 'PageView');
             padding: 50px 20px;
         }
 
-        .avatar {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            margin-bottom: 20px;
-        }
+ .avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  background: linear-gradient(145deg, #ffbc00, #ff8c00);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 5px 20px rgba(255,188,0,0.5);
+  animation: glow 2s infinite;
+  position: relative;
+  overflow: hidden;
+}
+
+.avatar img {
+  width: 90%;
+  height: 90%;
+  object-fit: cover;
+  border-radius: 50%;
+  z-index: 2;
+  position: relative;
+  padding: 5px;
+}
+
+/* Shine bar efecto dentro del avatar (opcional) */
+.avatar::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(255,255,255,0.4), transparent);
+  transform: rotate(45deg);
+  animation: shine 2.5s infinite;
+  z-index: 1;
+}
+
+/* Glow y shine animaciones */
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 5px 20px rgba(255,188,0,0.5);
+  }
+  50% {
+    box-shadow: 0 8px 30px rgba(255,188,0,0.8);
+  }
+}
+
+@keyframes shine {
+  0% {
+    transform: translateX(-100%) rotate(45deg);
+  }
+  100% {
+    transform: translateX(100%) rotate(45deg);
+  }
+}
+
 
         h1 {
             font-family: 'Montserrat', sans-serif;
