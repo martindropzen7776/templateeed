@@ -32,11 +32,15 @@ fbq('track', 'PageView');
             padding: 0;
         }
 
-        .container {
-            max-width: 400px;
-            margin: 0 auto;
-            padding: 50px 20px;
-        }
+.container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 50px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra horizontalmente todos los elementos hijos */
+}
+
 
         .logo {
             width: 220px;
