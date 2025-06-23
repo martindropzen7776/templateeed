@@ -38,7 +38,7 @@ fbq('track', 'PageView');
             padding: 50px 20px;
         }
 
- .avatar {
+.avatar {
   width: 150px;
   height: 150px;
   border-radius: 50%;
@@ -51,7 +51,9 @@ fbq('track', 'PageView');
   animation: glow 2s infinite;
   position: relative;
   overflow: hidden;
+  flex-shrink: 0; /* ← asegura que no se achique dentro de un flex */
 }
+
 
 .avatar img {
   width: 90%;
