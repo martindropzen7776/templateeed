@@ -65,7 +65,26 @@ fbq('track', 'PageView');
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
             transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
             font-family: 'Kanit', sans-serif;
+
+            /* Animación pulse */
+            animation: pulse 2s infinite;
         }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(4, 131, 60, 0.7);
+            }
+            70% {
+                transform: scale(1.05);
+                box-shadow: 0 0 0 20px rgba(4, 131, 60, 0);
+            }
+            100% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(4, 131, 60, 0);
+            }
+        }
+
 
         .cta-btn:hover {
             background-color: #0a3718;
@@ -81,7 +100,7 @@ fbq('track', 'PageView');
         .footer {
             margin-top: 35px;
             font-size: 30px;
-            font-family: 'Kanit', sans-serif;
+            font-family: 'Montserrat', sans-serif;
         }
 
         .footer p {
